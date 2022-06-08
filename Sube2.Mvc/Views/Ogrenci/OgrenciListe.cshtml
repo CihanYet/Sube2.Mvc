@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<Ogrenci>
 @{
-    ViewData["Title"] = "OgrenciListe";
+    ViewData["Title"] = "Ogrenci Listesi";
 }
 
 <h1>Ogrenci Listesi</h1>
@@ -21,7 +21,7 @@
                 <td>@item.Ad</td>
                 <td>@item.Soyad</td>
                 <td>@item.Numara</td>
-                <td><a class="btn btn-sm btn-primary text-white">Düzenle</a>  <a class="btn btn-sm btn-danger text-white">Sil</a></td>
+                <td><a href="/Ogrenci/OgrenciDetay/@item.Ogrenciid" class="btn btn-sm btn-primary text-white">Düzenle</a>  <a href="/Ogrenci/OgrenciSil/@item.Ogrenciid" class="btn btn-sm btn-danger text-white" onclick="return confirm('Emin misiniz?')">Sil</a></td>
             </tr>
         }
     </tbody>
